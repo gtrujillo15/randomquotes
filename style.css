@@ -1,0 +1,49 @@
+body {
+    background-color: #f3efea;
+}
+
+section {
+    height: 300px;
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 7%;
+}
+
+h2 {
+    font-style: italic;
+}
+
+#newquote {
+    display: block;
+    margin: auto;
+}
+
+.form-wrapper {
+    height: 250px;
+    width: 27%;
+    margin: auto;
+}
+
+form {
+    margin-left: 24%;
+}
+
+#login {
+    margin-left: 25%;
+}
+
+p {
+    display: inline-block;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.register {
+    margin-left: 166px;
+}

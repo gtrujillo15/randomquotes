@@ -1,0 +1,25 @@
+.form-wrapper {
+    height: 200px;
+    width: 71%;
+    margin: auto;
+}
+
+form {
+    margin-left: 39%;
+}
+
+p {
+    display: inline-block;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.logout {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+#newquote {
+    margin-left: 14%;
+}
