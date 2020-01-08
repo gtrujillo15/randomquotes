@@ -4,7 +4,7 @@
 
 require 'quoconfig.php';
 
-// Quote
+// Going into quotelist database and producing a query to grab values
 $quote = "SELECT * FROM quotelist ORDER BY RAND()";
 $quoteresult = $quoConn->query($quote);
 $quoterow = $quoteresult->fetch_assoc();
@@ -24,13 +24,14 @@ $quoConn->close();
         <h1>Random Quotes from Popular Movies/TV</h1>
         <h3>Refresh for a new quote!</h3>
         <h2><?php 
-        // Place information about quotes
+        // This is where the quotes are posted
         echo $quoterow['quote'] . "<br>";
         echo $quoterow['author'];
         ?></h2>
 
     </section>
     <section>
+        <!-- FORM FOR LOGGING IN -->
         <div class="form-wrapper">
             <h4>Log In and Post Your Favorite Quote</h4>
             <form action="profile.php" method="post">
