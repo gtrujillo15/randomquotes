@@ -9,6 +9,7 @@ $dBName = "login";
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 
 
-if (!$conn == true ) {
-    die("Connection failed: " .mysqli_connect_error());
+if (mysqli_connect_errno() ) {
+    die ("Connection failed: " . mysqli_connect_error());
 }
+

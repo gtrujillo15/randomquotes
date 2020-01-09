@@ -20,6 +20,9 @@ if (isset($_POST['login']) == true) {
     }
 }
 
+if (isset($_POST['register']) == true) {
+    header("Location: profile.php");
+}
 
 // IF THEY POST A QUOTE, INPUT A SUCCESS NOTIFICATION AND SHOW THEIR QUOTE BELOW.
 
@@ -48,7 +51,7 @@ if (isset($_POST['login']) == true) {
         </form>
         </div>
         <div class="logout">
-            <button type="submit">Log Out</button>
+            <a href="logout.php"><button type="submit">Log Out</button></a>
         </div>
     </section>
     <section>

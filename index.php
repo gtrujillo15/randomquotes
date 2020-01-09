@@ -2,6 +2,7 @@
 <html lang="en">
 <?php 
 
+require 'config.php';
 require 'quoconfig.php';
 
 // Going into quotelist database and producing a query to grab values
@@ -9,7 +10,6 @@ $quote = "SELECT * FROM quotelist ORDER BY RAND()";
 $quoteresult = $quoConn->query($quote);
 $quoterow = $quoteresult->fetch_assoc();
 
-$quoConn->close();
 ?>
 
 <head>
@@ -35,8 +35,8 @@ $quoConn->close();
         <div class="form-wrapper">
             <h4>Log In and Post Your Favorite Quote</h4>
             <form action="profile.php" method="post">
-                <p>Name:</p><input type="text" name="name" id="name"><br>
-                <p>Password:</p><input type="password" name="password" id="password"><br><br>
+                <p>Name:</p><input type="text" name="name" id="name" require><br>
+                <p>Password:</p><input type="password" name="password" id="password" require><br><br>
                 <input type="submit" value="Log In" id="login">
             </form>
             <p><a class="register" href="register.php">Register Here</a></p>
