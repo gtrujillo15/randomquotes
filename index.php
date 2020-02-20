@@ -10,6 +10,11 @@ $quote = "SELECT * FROM quotelist ORDER BY RAND()";
 $quoteresult = $quoConn->query($quote);
 $quoterow = $quoteresult->fetch_assoc();
 
+// Set variables for name and password to add safety
+$name = '';
+$name = htmlspecialchars( strip_tags($name));
+$email = '';
+$email = htmlspecialchars( strip_tags($email));
 ?>
 
 <head>
@@ -34,9 +39,9 @@ $quoterow = $quoteresult->fetch_assoc();
         <!-- FORM FOR LOGGING IN -->
         <div class="form-wrapper">
             <h4>Log In and Post Your Favorite Quote</h4>
-            <form action="profile.php" method="post">
-                <p>Name:</p><input type="text" name="name" id="name" require><br>
-                <p>Password:</p><input type="password" name="password" id="password" require><br><br>
+            <form action="<?php echo htmlspecialchars("profile.php");?>" method="post">
+                <p>Name:</p><input type="text" name="name" id="name" placeholder="gabytest" value="<?php echo $name;?>" require><br>
+                <p>Password:</p><input type="password" name="password" id="password" placeholder="test" value="<?php echo $email; ?>" require><br><br>
                 <input type="submit" value="Log In" id="login">
             </form>
             <p><a class="register" href="register.php">Register Here</a></p>

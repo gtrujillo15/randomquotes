@@ -17,7 +17,7 @@
         <div class="form-wrapper">
             <h3>Registration</h3>
             <form action="profile.php" method="post">
-                <p>Name:</p><input type="text" name="newname" value="newname"><br>
+                <p>Name:</p><input type="text" name="newname"><br>
                 <p>Email:</p><input type="text" name="email"><br>
                 <p>Password:</p><input type="password" name="newpassword"><br>
                 <p>Confirm Password:</p><input type="password" name="passwordconfirm"><br><br>
